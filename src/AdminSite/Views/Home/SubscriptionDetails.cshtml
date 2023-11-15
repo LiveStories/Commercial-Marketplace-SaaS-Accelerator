@@ -9,7 +9,7 @@
 
         <div>
             <div class="text-left mt40">
-                <span class="cm-section-heading">Subscription Details</span>
+                <span class="cm-section-heading">Forward Subscription Details</span>
             </div>
             @if (Model != null && !string.IsNullOrEmpty(Model.ErrorMessage))
             {
@@ -100,14 +100,14 @@
                                 }
                             }
                         }
-                      
+
                         <dt class="col-sm-3 p-2 p10">
                             @Html.DisplayName("Beneficiary Email")
                         </dt>
                         <dd class="col-sm-9 p-2 p10">
                             @Html.DisplayFor(model => model.Beneficiary.EmailId)
                             @Html.HiddenFor(model => model.Beneficiary.EmailId)
-                        </dd>  
+                        </dd>
                         <dt class="col-sm-3 p-2 p10">
                             @Html.DisplayName("Beneficiary Tenant ID ")
                         </dt>
