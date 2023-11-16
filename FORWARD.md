@@ -52,22 +52,38 @@ dotnet tool install --global dotnet-ef; `
 git clone https://github.com/Azure/Commercial-Marketplace-SaaS-Accelerator.git -b 7.4.0 --depth 1; `
 cd ./Commercial-Marketplace-SaaS-Accelerator/deployment; `
 .\Deploy.ps1 `
- -WebAppNamePrefix "fwd-case-mgmt" `
- -ResourceGroupForDeployment "fwdfedev0rg" `
+ -Location "East US"
+ -WebAppNamePrefix "fwdcasemgmt2" `
+ -ResourceGroupForDeployment "fwdcasemgmt2" `
  -PublisherAdminUsers "regis.anclades@forwardplatform.com,regis.anclades@livestories.com" `
- -Location "West US 2" `
  -TenantID "e34f2bd8-0f32-4d15-a9a1-4b96a16d51e3" `
  -AzureSubscriptionID "e32b6a1d-5183-4d1f-9d68-6f5a7381a724"
+```
 
- Starting SaaS Accelerator Deployment...
-🔑 Tenant provided: e34f2bd8-0f32-4d15-a9a1-4b96a16d51e3
-🔑 Azure Subscription provided: e32b6a1d-5183-4d1f-9d68-6f5a7381a724
-🔑 Azure Subscription 'e32b6a1d-5183-4d1f-9d68-6f5a7381a724' selected.
-🔑 Creating Fulfilment API App Registration
-   🔵 FulfilmentAPI App Registration created.
-      ➡️ Application ID: f27af004-1c45-4587-bc9c-7491f2cdaa8e
-      ➡️ App Secret: M6l8Q~Cnoampx~k4H5Z0agzmlWGnph3bkNnkocsK
-🔑 Creating Landing Page SSO App Registration
-   🔵 Landing Page SSO App Registration created.
-      ➡️ Application Id: fdcf559d-a9d6-416a-893f-9ffc8cbe0e29
+```
+
+git clone https://github.com/Azure/Commercial-Marketplace-SaaS-Accelerator.git -b 7.4.0 --depth 1
+
+cd ./Commercial-Marketplace-SaaS-Accelerator/deployment
+
+.\Deploy.ps1 -WebAppNamePrefix "fwdcasemgmt3" -ResourceGroupForDeployment "fwdcasemgmt3" -PublisherAdminUsers "regis.anclades@forwardplatform.com" -TenantID "e34f2bd8-0f32-4d15-a9a1-4b96a16d51e3" -AzureSubscriptionID "e32b6a1d-5183-4d1f-9d68-6f5a7381a724" -Location "East US"
+
+```
+
+```
+      ➡️ Landing Page section:       https://fwdcasemgmt3-portal.azurewebsites.net/
+      ➡️ Connection Webhook section: https://fwdcasemgmt3-portal.azurewebsites.net/api/AzureWebhook
+      ➡️ Tenant ID:                  e34f2bd8-0f32-4d15-a9a1-4b96a16d51e3
+      ➡️ AAD Application ID section: f699f678-bde5-4b3c-b119-8aebea5ab6d8
+
+https://case-management-admin.forwardplatform.com/
+https://case-management-saas.forwardplatform.com/api/AzureWebhook
+https://case-management-saas.forwardplatform.com/
+
+      ➡️ Landing Page section:       https://case-management-saas.forwardplatform.com/
+      ➡️ Connection Webhook section: https://case-management-saas.forwardplatform.com/api/AzureWebhook
+      ➡️ Tenant ID:                  e34f2bd8-0f32-4d15-a9a1-4b96a16d51e3
+      ➡️ AAD Application ID section: f699f678-bde5-4b3c-b119-8aebea5ab6d8
+
+
 ```
